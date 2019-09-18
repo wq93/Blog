@@ -122,7 +122,7 @@ export default {
         },
 
         previewVideo () {
-            const videoBlob = new Blob(this.chunks, { 'type' : 'video/webm;codecs=vp9' })
+            const videoBlob = new Blob(this.chunks, { 'type' : 'video/mp4' })
             this.chunks = new Set()
             this.videoUrl = window.URL.createObjectURL(videoBlob)
             this.canDownload = true
@@ -132,7 +132,7 @@ export default {
         download () {
             var a = document.createElement('a')
             a.href = this.videoUrl
-            a.download = 'record-canvas.webm'
+            a.download = 'record-canvas.mp4'
             a.style.display = 'none'
             document.body.appendChild(a)
             a.click()

@@ -13,8 +13,8 @@
         data () {
             return {
                 token: '1563266971025',
-                article_text: '',
-                article_url: ''
+                article_text: '给Canvas录制一个视频',
+                article_url: 'https://juejin.im/post/5d81f689f265da039b24cf56'
             }
         }
     }

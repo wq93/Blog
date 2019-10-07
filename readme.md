@@ -3,6 +3,7 @@
 > “扬枹兮拊鼓，疏缓节兮[安歌](https://juejin.im/user/5a96817df265da4e9c635c39/posts)。”
 
 ## 原创：
+- [【React系列】手把手带你撸后台系统（Redux与路由鉴权）](https://github.com/qiudongwei/blog/issues/24)
 - [【React系列】手把手带你撸后台系统（架构篇）](https://github.com/qiudongwei/blog/issues/23)
 - [给Canvas录制一个视频](https://github.com/qiudongwei/blog/issues/22)
 - [【JS进阶】教你在中后台系统玩转ES6](https://github.com/qiudongwei/blog/issues/19)

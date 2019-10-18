@@ -20,7 +20,8 @@ module.exports = {
             ['/views/DataTransfer', 'DataTransfer'],
             ['/views/MediaRecorder', 'MediaRecorder'],
             ['/views/ChineseMap', 'ChineseMap'],
-            ['/views/FreeFalling', 'FreeFalling']
+            ['/views/FreeFalling', 'FreeFalling'],
+            ['/views/ImageParticle', 'ImageParticle']
         ]
     },
     markdown: {

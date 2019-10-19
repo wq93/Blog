@@ -1,20 +1,20 @@
-### MediaRecorder Demo
+### 文字/图像粒子
 <hr />
 <ClientOnly>
     <LockPage :token="token" :articleText="article_text" :articleUrl="article_url">
-        <MediaRecorder/>
+        <ImageParticle />
     </LockPage>
 </ClientOnly>
 
 <script>
     import '@scss/global.scss'
     export default {
-        name: 'MediaRecoderMD',
+        name: 'ImageParticleMD',
         data () {
             return {
-                token: '1563266971025',
-                article_text: '给Canvas录制一个视频',
-                article_url: 'https://juejin.im/post/5d81f689f265da039b24cf56'
+                token: '1571019819272',
+                article_text: '',
+                article_url: ''
             }
         }
     }

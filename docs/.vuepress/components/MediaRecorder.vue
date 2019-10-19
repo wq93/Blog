@@ -121,7 +121,6 @@ export default {
         },
 
         previewVideo () {
-            // const videoBlob = new Blob(this.chunks, { 'type' : 'video/webm;codecs=vp9' })
             const videoBlob = new Blob(this.chunks, { 'type' : 'video/mp4' })
             this.chunks = new Set()
             this.videoUrl = window.URL.createObjectURL(videoBlob)

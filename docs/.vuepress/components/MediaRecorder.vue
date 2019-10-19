@@ -12,7 +12,7 @@
                 </div>
                 <div class="circle-preview">
                     <p class="circle-title">预览效果</p>
-                    <video ref="$video" class="circle-video" :src="videoUrl" autoplay controls></video>
+                    <video ref="$video" class="circle-video" :src="videoUrl" type="video/mp4" controls autoplay></video>
                 </div>
             </div>
         </div>
@@ -93,12 +93,11 @@ export default {
             ctx.stroke()
         },
 
-        createVideo (canvas) {
-            const mediaStream = canvas.captureStream(10) // 设置帧频率
+        createVideo (ele) {
+            const mediaStream = ele.captureStream(10) // 设置帧频率
             this.mediaRecord = new MediaRecorder(mediaStream, {
                 videoBitsPerSecond: 8500000
             })
-
             this.mediaRecord.ondataavailable = (e) => {
                 this.chunks.add(e.data)
             }
@@ -122,7 +121,8 @@ export default {
         },
 
         previewVideo () {
-            const videoBlob = new Blob(this.chunks, { 'type' : 'video/webm;codecs=vp9' })
+            // const videoBlob = new Blob(this.chunks, { 'type' : 'video/webm;codecs=vp9' })
+            const videoBlob = new Blob(this.chunks, { 'type' : 'video/mp4' })
             this.chunks = new Set()
             this.videoUrl = window.URL.createObjectURL(videoBlob)
             this.canDownload = true
@@ -132,7 +132,7 @@ export default {
         download () {
             var a = document.createElement('a')
             a.href = this.videoUrl
-            a.download = 'record-canvas.webm'
+            a.download = 'record-canvas.mp4'
             a.style.display = 'none'
             document.body.appendChild(a)
             a.click()
@@ -142,6 +142,7 @@ export default {
         }
     },
     mounted () {
+        // this.createVideo(this.$refs.$video)
         this.initCircleCanvas()
     }
 }
